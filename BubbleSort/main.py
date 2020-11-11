@@ -22,5 +22,3 @@ def BubbleSort(array, typeOfSort):
          border -= 1
    
    return array
-
-print(BubbleSort([1, 3, 3, 8, 4, 78, 66, 10, 10], 0))
