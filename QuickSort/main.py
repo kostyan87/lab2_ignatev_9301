@@ -1,6 +1,10 @@
 # typeOfSort = 1 to sort in ascending order
 # typeOfSort = 0 to sort in descending order
 
+import time
+
+start_time = time.time()
+
 def QuickSort(array, typeOfSort):
    
    if type(array) is not list: raise Exception('Array is not array')
@@ -27,9 +31,7 @@ def QuickSort(array, typeOfSort):
          if i <= array[0]: lessArr.append(i)
          else: moreArr.append(i)
       
-      if typeOfSort: return QuickSort(lessArr, 1) + [mid] + QuickSort(moreArr, 1)
-      else: return QuickSort(lessArr, 0) + [mid] + QuickSort(moreArr, 0)
+      result = QuickSort(lessArr, 1) + [mid] + QuickSort(moreArr, 1)
 
-print(QuickSort([9, 7, 5, 8], 0))
-
-# Какого то хрена не могу сделать сортировку по убыванию
+      if typeOfSort: return result
+      return result[::-1]

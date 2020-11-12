@@ -35,5 +35,3 @@ def BogoSort(array, typeOfSort):
          random.shuffle(array)
    
    return array
-
-print(BogoSort([5,5,9,8], 1))

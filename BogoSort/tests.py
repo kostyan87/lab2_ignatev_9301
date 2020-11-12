@@ -9,6 +9,9 @@ class BubbleSortTests(unittest.TestCase):
       self.assertEqual(BogoSort([1, 3, 3, 8, 4], 1), [1, 3, 3, 4, 8])
       self.assertEqual(BogoSort([1, 2, 3], 1), [1, 2, 3])
       self.assertEqual(BogoSort([7, 6, 5, 4], 1), [4, 5, 6, 7])
+      self.assertEqual(BogoSort([7, -8, 5, -894], 1), [-894, -8, 5, 7])
+      self.assertEqual(BogoSort([-7, -6, -5, -4], 1), [-7, -6, -5, -4])
+      self.assertEqual(BogoSort([7, -6], 1), [-6, 7])
    
    def test_fullArray_descending(self):
       self.assertEqual(BogoSort([9, 7, 5, 8], 0), [9, 8, 7, 5])
@@ -16,6 +19,9 @@ class BubbleSortTests(unittest.TestCase):
       self.assertEqual(BogoSort([1, 3, 3, 8, 4], 0), [8, 4, 3, 3, 1])
       self.assertEqual(BogoSort([1, 2, 3], 0), [3, 2, 1])
       self.assertEqual(BogoSort([7, 6, 5], 0), [7, 6, 5])
+      self.assertEqual(BogoSort([7, -8, 5, -894], 0), [7, 5, -8, -894])
+      self.assertEqual(BogoSort([-7, -6, -5, -4], 0), [-4, -5, -6, -7])
+      self.assertEqual(BogoSort([7, -6], 0), [7, -6])
 
    def test_emptyArray(self):
       self.assertEqual(BogoSort([], 0), [])
